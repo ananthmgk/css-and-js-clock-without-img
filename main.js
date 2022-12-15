@@ -2,9 +2,6 @@ window.addEventListener('load', () => {
   const secondHand = document.querySelector('.second-hand');
   const minutesHand = document.querySelector('.min-hand');
   const hourHand = document.querySelector('.hour-hand');
-  const clockFace = document.querySelector('.clock-face');
-  const WholeClock = document.querySelector('.clock');
-  const hideSlimLine = document.querySelector('.hide-slim-line');
 
   const weekdayList = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
   const monthList = [
