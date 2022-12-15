@@ -1,0 +1,514 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.clock {
+  width: 30rem;
+  height: 30rem;
+  border: 15px solid grey;
+  border-radius: 50%;
+  margin: 50px auto;
+  position: relative;
+  padding: 2rem;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef,
+    inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.clock-face {
+  position: relative;
+  width: 110%;
+  height: 110%;
+  border-radius: 50%;
+  background-color: white;
+  transform: translate(-25px, -24px);
+}
+
+.hour-hand {
+  width: 37%;
+  height: 15px;
+  border-radius: 20%;
+  background: black;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.05s;
+}
+
+.min-hand {
+  width: 45%;
+  height: 15px;
+  border-radius: 20%;
+  background: black;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.05s;
+}
+
+.second-hand {
+  width: 60%;
+  height: 6px;
+  border-radius: 20%;
+  background: red;
+  position: absolute;
+  top: 50.5%;
+  right: 35%;
+  transform-origin: 75%;
+  transform: rotate(90deg);
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.center-round-min {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: black;
+  transform: translate(252px, 257px);
+}
+
+.center-round-sec {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: red;
+  transform: translate(256px, 238px);
+}
+
+.date-container {
+  width: 77%;
+  height: 8%;
+  position: absolute;
+  top: 47%;
+  right: 14%;
+  color: grey;
+  font-family: sans-serif;
+}
+
+.day-display {
+  width: 20%;
+  height: 100%;
+  position: absolute;
+  right: 70%;
+}
+
+.month-display {
+  width: 17%;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  right: 15%;
+}
+
+.date-display {
+  width: 13%;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  right: 0%;
+}
+
+/* .button {
+  width: 20px;
+  height: 45px;
+  position: absolute;
+  right: -7%;
+  top: 46.5%;
+  background-color: grey;
+  cursor: pointer;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.2);
+  font-size: small;
+} */
+
+.num-cointainer {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  font-family: sans-serif;
+}
+
+.one-num {
+  width: 13%;
+  height: 10%;
+  position: absolute;
+  top: 8%;
+  right: 19%;
+  color: grey;
+  font-size: 200%;
+}
+
+.two-num {
+  width: 13%;
+  height: 10%;
+  position: absolute;
+  top: 22%;
+  right: 4%;
+  color: grey;
+  font-size: 200%;
+}
+
+.three-num {
+  width: 13%;
+  height: 10%;
+  position: absolute;
+  top: 44.7%;
+  right: -2%;
+  color: grey;
+  font-size: 200%;
+}
+
+.four-num {
+  width: 13%;
+  height: 10%;
+  position: absolute;
+  top: 63%;
+  right: 4%;
+  color: grey;
+  font-size: 200%;
+}
+
+.five-num {
+  width: 13%;
+  height: 10%;
+  position: absolute;
+  top: 78%;
+  right: 19%;
+  color: grey;
+  font-size: 200%;
+}
+
+.six-num {
+  width: 13%;
+  height: 10%;
+  position: absolute;
+  top: 84%;
+  right: 40.5%;
+  color: grey;
+  font-size: 200%;
+}
+
+.seven-num {
+  width: 13%;
+  height: 10%;
+  position: absolute;
+  top: 78%;
+  right: 60%;
+  color: grey;
+  font-size: 200%;
+}
+
+.eight-num {
+  width: 13%;
+  height: 10%;
+  position: absolute;
+  top: 64%;
+  right: 75%;
+  color: grey;
+  font-size: 200%;
+}
+
+.nine-num {
+  width: 13%;
+  height: 10%;
+  position: absolute;
+  top: 45%;
+  right: 83%;
+  color: grey;
+  font-size: 200%;
+}
+
+.ten-num {
+  width: 13%;
+  height: 10%;
+  position: absolute;
+  top: 25%;
+  right: 78%;
+  color: grey;
+  font-size: 200%;
+}
+
+.eleven-num {
+  width: 13%;
+  height: 10%;
+  position: absolute;
+  top: 9%;
+  right: 65%;
+  color: grey;
+  font-size: 200%;
+}
+
+.twelve-num {
+  width: 13%;
+  height: 10%;
+  position: absolute;
+  top: 2%;
+  right: 44%;
+  color: grey;
+  font-size: 200%;
+}
+
+.hide-slim-line {
+  width: 94%;
+  height: 94%;
+  border-radius: 50%;
+  position: absolute;
+  background-color: gray;
+  transform: translate(16px, 16px);
+}
+
+.slim-lines0 {
+  width: 50%;
+  height: 5px;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  background-color: rgb(92, 90, 90);
+  transform-origin: 100%;
+}
+.slim-lines1 {
+  width: 50%;
+  height: 5px;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  background-color: rgb(92, 90, 90);
+  transform-origin: 100%;
+}
+
+.slim-lines2 {
+  width: 50%;
+  height: 5px;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  background-color: rgb(92, 90, 90);
+  transform-origin: 100%;
+}
+
+.fat-line {
+  width: 50%;
+  height: 5px;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  background-color: rgb(92, 90, 90);
+  transform-origin: 100%;
+  transform: rotate(90deg);
+}
+
+/* .line-one {
+  width: 2.4%;
+  height: 3%;
+  position: absolute;
+  top: 0%;
+  right: 48.7%;
+  background-color: rgb(243, 84, 84);
+}
+
+
+
+.line-two {
+  width: 3%;
+  height: 2.4%;
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  background-color: rgb(243, 84, 84);
+}
+
+.line-three {
+  width: 2.4%;
+  height: 3%;
+  position: absolute;
+  top: 97%;
+  right: 48.5%;
+  background-color: rgb(243, 84, 84);
+}
+
+.line-four {
+  width: 3%;
+  height: 2.4%;
+  position: absolute;
+  top: 50.2%;
+  right: 97%;
+  background-color: rgb(243, 84, 84);
+} */
+
+@media (max-width: 430px) {
+  .clock {
+    width: 15rem;
+    height: 15rem;
+    border: 8px solid grey;
+    border-radius: 50%;
+    margin: 50px auto;
+    position: relative;
+    padding: 2rem;
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef,
+      inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .clock-face {
+    position: relative;
+    width: 122%;
+    height: 122%;
+    border-radius: 50%;
+    background-color: white;
+    transform: translate(-25px, -25px);
+  }
+
+  .hour-hand {
+    width: 37%;
+    height: 10px;
+    border-radius: 20%;
+    background: black;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.05s;
+  }
+
+  .min-hand {
+    width: 45%;
+    height: 10px;
+    border-radius: 20%;
+    background: black;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.05s;
+  }
+
+  .second-hand {
+    width: 62%;
+    height: 4px;
+    border-radius: 20%;
+    background: red;
+    position: absolute;
+    top: 51.7%;
+    right: 34.5%;
+    transform-origin: 75%;
+    transform: rotate(90deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+  }
+
+  .center-round-min {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: black;
+    transform: translate(138px, 143px);
+  }
+
+  .center-round-sec {
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    background-color: red;
+    transform: translate(140.5px, 130.5px);
+  }
+
+  .date-container {
+    width: 73%;
+    height: 8%;
+    position: absolute;
+    top: 47%;
+    right: 16%;
+    color: grey;
+    font-family: sans-serif;
+    font-size: 60%;
+  }
+
+  /* .button {
+    width: 15px;
+    height: 35px;
+    position: absolute;
+    right: -7.5%;
+    top: 45.5%;
+    background-color: grey;
+    cursor: pointer;
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.2);
+    font-size: small;
+  } */
+
+  .num-cointainer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    font-size: 60%;
+    font-family: sans-serif;
+  }
+
+  .three-num {
+    width: 13%;
+    height: 10%;
+    position: absolute;
+    top: 44%;
+    right: -2%;
+    color: grey;
+    font-size: 200%;
+  }
+
+  .six-num {
+    width: 13%;
+    height: 10%;
+    position: absolute;
+    top: 83%;
+    right: 41%;
+    color: grey;
+    font-size: 200%;
+  }
+
+  .nine-num {
+    width: 13%;
+    height: 10%;
+    position: absolute;
+    top: 44%;
+    right: 83%;
+    color: grey;
+    font-size: 200%;
+  }
+
+  .twelve-num {
+    width: 13%;
+    height: 10%;
+    position: absolute;
+    top: 2%;
+    right: 45%;
+    color: grey;
+    font-size: 200%;
+  }
+}
+/* 
+@media (420px <= width <= 560px) {
+  .center-round-min {
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+    background-color: black;
+    transform: translate(1130%, 1240%);
+  }
+
+  .center-round-sec {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: red;
+    transform: translate(1485%, 1510%);
+  }
+} */
