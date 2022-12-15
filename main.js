@@ -4,6 +4,7 @@ window.addEventListener('load', () => {
   const hourHand = document.querySelector('.hour-hand');
   const clockFace = document.querySelector('.clock-face');
   const WholeClock = document.querySelector('.clock');
+  const hideSlimLine = document.querySelector('.hide-slim-line');
 
   const weekdayList = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
   const monthList = [
@@ -21,21 +22,6 @@ window.addEventListener('load', () => {
     'DEC',
   ];
 
-  const classLists = [
-    'one-num',
-    'two-num',
-    'three-num',
-    'four-num',
-    'five-num',
-    'six-num',
-    'seven-num',
-    'eight-num',
-    'nine-num',
-    'ten-num',
-    'eleven-num',
-    'twelve-num',
-  ];
-
   const now = new Date();
   const day = weekdayList[now.getDay()];
   const month = monthList[now.getMonth()];
@@ -44,7 +30,7 @@ window.addEventListener('load', () => {
   function setAllNumbers() {
     let numbers = [setAllSlimLines()];
     for (let i = 1; i <= 12; i++) {
-      numbers.push(`<div class="${classLists[i - 1]}">${i}</div>`);
+      numbers.push(`<div class="num${i}">${i}</div>`);
     }
     return numbers.join(' ');
   }
@@ -55,32 +41,17 @@ window.addEventListener('load', () => {
       slimLines.push(
         `<div class="slim-lines${i}" style="transform: rotate(${
           (i / 60) * 360 + 90
-        }deg);"></div>`
+        }deg);width: 50.5%;height: 5px;position: absolute;top: 50%;right: 50%;background-color: rgb(92, 90, 90);transform-origin: 100%;"></div>`
       );
     }
+    slimLines.push(`<div class="hide-slim-line"></div>`);
     return slimLines.join(' ');
   }
-  console.log(setAllSlimLines());
 
   document.querySelector('.day-display').innerHTML = day;
   document.querySelector('.month-display').innerHTML = month;
   document.querySelector('.date-display').innerHTML = date;
   document.querySelector('.num-cointainer').innerHTML = setAllNumbers();
-
-  // function setLines() {
-  //   let classes = [];
-  //   for (let i = 0; i <= 59; i++) {
-  //     classes.push(
-  //       `document.querySelector(.slim-lines${i}).slimLine.style.transform = rotate(${
-  //         (i / 60) * 360 + 90
-  //       }deg)`
-  //     );
-  //   }
-  //   return classes;
-  // }
-  // setLines();
-  // let list = setLines();
-  // console.log(list);
 
   function setDate() {
     const now = new Date();
