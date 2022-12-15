@@ -435,44 +435,13 @@ body {
     font-family: sans-serif;
   }
 
-  .three-num {
-    width: 13%;
-    height: 10%;
+  .hide-slim-line {
+    width: 96%;
+    height: 96%;
+    border-radius: 50%;
     position: absolute;
-    top: 44%;
-    right: -2%;
-    color: grey;
-    font-size: 200%;
-  }
-
-  .six-num {
-    width: 13%;
-    height: 10%;
-    position: absolute;
-    top: 83%;
-    right: 41%;
-    color: grey;
-    font-size: 200%;
-  }
-
-  .nine-num {
-    width: 13%;
-    height: 10%;
-    position: absolute;
-    top: 44%;
-    right: 83%;
-    color: grey;
-    font-size: 200%;
-  }
-
-  .twelve-num {
-    width: 13%;
-    height: 10%;
-    position: absolute;
-    top: 2%;
-    right: 45%;
-    color: grey;
-    font-size: 200%;
+    background-color: white;
+    transform: translate(6px, 8px);
   }
 }
 /* 
