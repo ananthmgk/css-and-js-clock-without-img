@@ -28,7 +28,7 @@ window.addEventListener('load', () => {
   const date = now.getDate();
 
   function setAllNumbers() {
-    let numbers = [setAllSlimLines()];
+    let numbers = [setAllSlimLines(), setAllFatLines()];
     for (let i = 1; i <= 12; i++) {
       numbers.push(`<div class="num${i}">${i}</div>`);
     }
@@ -44,8 +44,21 @@ window.addEventListener('load', () => {
         }deg);width: 50.5%;height: 5px;position: absolute;top: 50%;right: 50%;background-color: rgb(92, 90, 90);transform-origin: 100%;"></div>`
       );
     }
-    slimLines.push(`<div class="hide-slim-line"></div>`);
+    slimLines.push(`<div class="hide-slim-lines"></div>`);
     return slimLines.join(' ');
+  }
+
+  function setAllFatLines() {
+    let fatLines = [];
+    for (let i = 0; i <= 59; i += 5) {
+      fatLines.push(
+        `<div class="fat-lines${i}" style="transform: rotate(${
+          (i / 60) * 360 + 90
+        }deg);width: 50.5%;height: 10px;position: absolute;top: 49.5%;right: 50%;background-color: rgb(92, 90, 95);transform-origin: 100%;"></div>`
+      );
+    }
+    fatLines.push(`<div class="hide-fat-lines"></div>`);
+    return fatLines.join(' ');
   }
 
   document.querySelector('.day-display').innerHTML = day;

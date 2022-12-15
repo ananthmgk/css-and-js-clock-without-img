@@ -118,18 +118,6 @@ body {
   right: 0%;
 }
 
-/* .button {
-  width: 20px;
-  height: 45px;
-  position: absolute;
-  right: -7%;
-  top: 46.5%;
-  background-color: grey;
-  cursor: pointer;
-  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.2);
-  font-size: small;
-} */
-
 .num-cointainer {
   border-radius: 50%;
   width: 100%;
@@ -258,7 +246,7 @@ body {
   font-size: 200%;
 }
 
-.hide-slim-line {
+.hide-slim-lines {
   width: 96%;
   height: 96%;
   border-radius: 50%;
@@ -267,63 +255,26 @@ body {
   transform: translate(10px, 12px);
 }
 
-/* .slim-lines0 {
-  width: 50.5%;
-  height: 5px;
+.hide-fat-lines {
+  width: 93%;
+  height: 93%;
+  border-radius: 50%;
   position: absolute;
-  top: 50%;
-  right: 50%;
-  background-color: rgb(92, 90, 90);
-  transform-origin: 100%;
-} */
-
-.fat-line {
-  width: 50%;
-  height: 5px;
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  background-color: rgb(92, 90, 90);
-  transform-origin: 100%;
-  transform: rotate(90deg);
+  background-color: white;
+  transform: translate(18px, 20px);
 }
 
-/* .line-one {
-  width: 2.4%;
-  height: 3%;
+/* 
+.button {
+  width: 20px;
+  height: 45px;
   position: absolute;
-  top: 0%;
-  right: 48.7%;
-  background-color: rgb(243, 84, 84);
-}
-
-
-
-.line-two {
-  width: 3%;
-  height: 2.4%;
-  position: absolute;
-  top: 50%;
-  right: 0%;
-  background-color: rgb(243, 84, 84);
-}
-
-.line-three {
-  width: 2.4%;
-  height: 3%;
-  position: absolute;
-  top: 97%;
-  right: 48.5%;
-  background-color: rgb(243, 84, 84);
-}
-
-.line-four {
-  width: 3%;
-  height: 2.4%;
-  position: absolute;
-  top: 50.2%;
-  right: 97%;
-  background-color: rgb(243, 84, 84);
+  right: -7%;
+  top: 46.5%;
+  background-color: grey;
+  cursor: pointer;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.2);
+  font-size: small;
 } */
 
 @media (max-width: 430px) {
@@ -345,7 +296,7 @@ body {
     height: 122%;
     border-radius: 50%;
     background-color: white;
-    transform: translate(-25px, -25px);
+    transform: translate(-25px, -29px);
   }
 
   .hour-hand {
@@ -415,6 +366,32 @@ body {
     font-size: 60%;
   }
 
+  .num-cointainer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    font-size: 60%;
+    font-family: sans-serif;
+  }
+
+  .hide-slim-lines {
+    width: 96%;
+    height: 96%;
+    border-radius: 50%;
+    position: absolute;
+    background-color: white;
+    transform: translate(7px, 8px);
+  }
+
+  .hide-fat-lines {
+    width: 93%;
+    height: 93%;
+    border-radius: 50%;
+    position: absolute;
+    background-color: white;
+    transform: translate(10px, 14px);
+  }
+
   /* .button {
     width: 15px;
     height: 35px;
@@ -426,23 +403,6 @@ body {
     box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.2);
     font-size: small;
   } */
-
-  .num-cointainer {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    font-size: 60%;
-    font-family: sans-serif;
-  }
-
-  .hide-slim-line {
-    width: 96%;
-    height: 96%;
-    border-radius: 50%;
-    position: absolute;
-    background-color: white;
-    transform: translate(6px, 8px);
-  }
 }
 /* 
 @media (420px <= width <= 560px) {
