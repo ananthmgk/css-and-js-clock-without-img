@@ -43,9 +43,9 @@ window.addEventListener('load', () => {
     let slimLines = [];
     for (let i = 0; i <= 59; i++) {
       slimLines.push(
-        `<div class="slim-lines${i}" style="transform: rotate(${
-          (i / 60) * 360 + 90
-        }deg);width: 50.5%;height: 1%;position: absolute;top: 50%;right: 50%;background-color: rgb(92, 90, 90);transform-origin: 100%;"></div>`
+        `<div class="slim-lines${i}" style="transform: rotate(${i * 6}deg);
+        width: 50.5%;height: 1%;position: absolute;top: 50%;right: 50%;
+        background-color: rgb(92, 90, 90);transform-origin: 100%;"></div>`
       );
     }
     slimLines.push(`<div class="hide-slim-lines"></div>`);
@@ -56,9 +56,9 @@ window.addEventListener('load', () => {
     let fatLines = [];
     for (let i = 0; i <= 59; i += 5) {
       fatLines.push(
-        `<div class="fat-lines${i}" style="transform: rotate(${
-          (i / 60) * 360 + 90
-        }deg);width: 50.5%;height: 2%;position: absolute;top: 49.5%;right: 50%;background-color: rgb(92, 90, 95);transform-origin: 100%;"></div>`
+        `<div class="fat-lines${i}" style="transform: rotate(${i * 6}deg);
+        width: 50.5%;height: 2%;position: absolute;top: 49.5%;right: 50%;
+        background-color: rgb(92, 90, 95);transform-origin: 100%;"></div>`
       );
     }
     fatLines.push(`<div class="hide-fat-lines"></div>`);
@@ -78,9 +78,9 @@ window.addEventListener('load', () => {
     let slimLines = [];
     for (let i = 0; i <= 59; i++) {
       slimLines.push(
-        `<div class="slim-lines${i}" style="transform: rotate(${
-          (i / 60) * 360 + 90
-        }deg);width: 50.5%;height: 1%;position: absolute;top: 50%;right: 50%;background-color: white;transform-origin: 100%;"></div>`
+        `<div class="slim-lines${i}" style="transform: rotate(${i * 6}deg);
+        width: 50.5%;height: 1%;position: absolute;top: 50%;right: 50%;
+        background-color: white;transform-origin: 100%;"></div>`
       );
     }
     slimLines.push(
@@ -93,9 +93,9 @@ window.addEventListener('load', () => {
     let fatLines = [];
     for (let i = 0; i <= 59; i += 5) {
       fatLines.push(
-        `<div class="fat-lines${i}" style="transform: rotate(${
-          (i / 60) * 360 + 90
-        }deg);width: 50.5%;height: 2%;position: absolute;top: 49.5%;right: 50%;background-color: white;transform-origin: 100%;"></div>`
+        `<div class="fat-lines${i}" style="transform: rotate(${i * 6}deg);
+        width: 50.5%;height: 2%;position: absolute;top: 49.5%;right: 50%;
+        background-color: white;transform-origin: 100%;"></div>`
       );
     }
     fatLines.push(
@@ -146,7 +146,7 @@ window.addEventListener('load', () => {
     const secondsDegrees = (seconds / 60) * 360 + 90;
     const minutesDegrees = (minutes / 60) * 360 + (seconds / 60) * 6 + 90;
     const hourDegrees = (hour / 12) * 360 + (minutes / 60) * 30 + 90;
-
+    console.log(minutes);
     secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
     minutesHand.style.transform = `rotate(${minutesDegrees}deg)`;
     hourHand.style.transform = `rotate(${hourDegrees}deg)`;
