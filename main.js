@@ -68,7 +68,7 @@ window.addEventListener('load', () => {
   function darkModeNumbers() {
     let numbers = [];
     for (let i = 1; i <= 12; i++) {
-      numbers.push(`<div class="num${i}" style="color: white;">${i}</div>`);
+      numbers.push(`<div class="num${i}" style="color: goldenrod;">${i}</div>`);
     }
     numbers.unshift(darkModeSlimLines(), darkModeFatLines());
     return numbers.join(' ');
@@ -80,7 +80,7 @@ window.addEventListener('load', () => {
       slimLines.push(
         `<div class="slim-lines${i}" style="transform: rotate(${i * 6}deg);
         width: 50.5%;height: 1%;position: absolute;top: 50%;right: 50%;
-        background-color: white;transform-origin: 100%;"></div>`
+        background-color: green;transform-origin: 100%;"></div>`
       );
     }
     slimLines.push(
@@ -95,7 +95,7 @@ window.addEventListener('load', () => {
       fatLines.push(
         `<div class="fat-lines${i}" style="transform: rotate(${i * 6}deg);
         width: 50.5%;height: 2%;position: absolute;top: 49.5%;right: 50%;
-        background-color: white;transform-origin: 100%;"></div>`
+        background-color: greenyellow;transform-origin: 100%;"></div>`
       );
     }
     fatLines.push(
@@ -123,10 +123,10 @@ window.addEventListener('load', () => {
     lightThemeBtn.style.backgroundColor = '';
     clockface.style.backgroundColor = 'black';
     body.style.backgroundColor = 'black';
-    hourHand.style.background = 'white';
-    minutesHand.style.background = 'white';
+    hourHand.style.background = 'grey';
+    minutesHand.style.background = 'grey';
     secondHand.style.background = 'greenyellow';
-    centerRoundMin.style.backgroundColor = 'white';
+    centerRoundMin.style.backgroundColor = 'grey';
     centerRoundSec.style.background = 'greenyellow';
   });
 
