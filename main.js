@@ -9,6 +9,9 @@ window.addEventListener('load', () => {
   const body = document.querySelector('body');
   const centerRoundMin = document.querySelector('.center-round-min');
   const centerRoundSec = document.querySelector('.center-round-sec');
+  const dayDisplay = document.querySelector('.day-display');
+  const monthDisplay = document.querySelector('.month-display');
+  const dateDisplay = document.querySelector('.date-display');
 
   const weekdayList = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
   const monthList = [
@@ -130,11 +133,11 @@ window.addEventListener('load', () => {
     centerRoundSec.style.background = 'greenyellow';
   });
 
-  document.querySelector('.day-display').innerHTML = day;
-  document.querySelector('.month-display').innerHTML = month;
-  document.querySelector('.date-display').innerHTML = date;
-
+  dayDisplay.innerHTML = day;
+  monthDisplay.innerHTML = month;
+  dateDisplay.innerHTML = date;
   numCointainer.innerHTML = setAllNumbers();
+
   lightThemeBtn.style.backgroundColor = 'grey';
 
   function setDate() {
@@ -146,7 +149,7 @@ window.addEventListener('load', () => {
     const secondsDegrees = (seconds / 60) * 360 + 90;
     const minutesDegrees = (minutes / 60) * 360 + (seconds / 60) * 6 + 90;
     const hourDegrees = (hour / 12) * 360 + (minutes / 60) * 30 + 90;
-    console.log(minutes);
+
     secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
     minutesHand.style.transform = `rotate(${minutesDegrees}deg)`;
     hourHand.style.transform = `rotate(${hourDegrees}deg)`;
