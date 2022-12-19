@@ -12,6 +12,7 @@ window.addEventListener('load', () => {
   const dayDisplay = document.querySelector('.day-display');
   const monthDisplay = document.querySelector('.month-display');
   const dateDisplay = document.querySelector('.date-display');
+  const input = document.querySelectorAll('.controls input');
 
   const weekdayList = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
   const monthList = [
@@ -67,6 +68,16 @@ window.addEventListener('load', () => {
     fatLines.push(`<div class="hide-fat-lines"></div>`);
     return fatLines.join(' ');
   }
+
+  function handleChange() {
+    const suffix = this.dataset.sizing || '';
+    document.documentElement.style.setProperty(
+      `--${this.name}`,
+      `${this.value + suffix}`
+    );
+  }
+  input.forEach((input) => input.addEventListener('change', handleChange));
+  input.forEach((input) => input.addEventListener('mousemove', handleChange));
 
   function darkModeNumbers() {
     let numbers = [];
