@@ -354,7 +354,7 @@ body {
     height: 122%;
     border-radius: 50%;
     background-color: white;
-    transform: translate(-25px, -29px);
+    transform: translate(-25px, -28px);
   }
 
   .btn-cointainer {
@@ -448,7 +448,7 @@ body {
     border-radius: 20%;
     background: red;
     position: absolute;
-    top: 51.7%;
+    top: 51%;
     right: 34.5%;
     transform-origin: 75%;
     transform: rotate(90deg);
@@ -469,7 +469,7 @@ body {
     height: 0.7rem;
     border-radius: 50%;
     background-color: red;
-    transform: translate(140.5px, 130.5px);
+    transform: translate(140.5px, 129.3px);
   }
 
   .date-container {
