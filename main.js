@@ -78,6 +78,7 @@ window.addEventListener('load', () => {
   }
   input.forEach((input) => input.addEventListener('change', handleChange));
   input.forEach((input) => input.addEventListener('mousemove', handleChange));
+  // input.forEach((input) => input.addEventListener('touchmove', handleChange));
 
   function darkModeNumbers() {
     let numbers = [];

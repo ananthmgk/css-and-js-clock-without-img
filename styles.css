@@ -392,10 +392,10 @@ body {
   }
 
   .controls {
-    margin-bottom: 420px;
+    margin-bottom: 500px;
     right: 0%;
     width: 50%;
-    height: auto;
+    height: 10%;
     position: absolute;
     font-family: sans-serif;
     font-size: 60%;
@@ -403,12 +403,17 @@ body {
   }
 
   .spacing {
+    position: relative;
     width: 30%;
+    top: 2%;
+    left: 2%;
   }
 
   .color-box {
-    bottom: 100%;
-    width: 20%;
+    position: absolute;
+    top: 45%;
+    left: 1%;
+    width: 80%;
   }
 
   .hour-hand {
